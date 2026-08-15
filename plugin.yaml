@@ -1,0 +1,16 @@
+schema: mcpg.dev/plugin/v1
+id: dev.mcpg.log.syslog
+name: Syslog Log Sink
+license: Apache-2.0
+description: |
+  A log_sink that formats each gateway/plugin log record as an RFC 5424
+  (default) or RFC 3164 syslog line and emits it to a UDP or TCP collector, or
+  to stdout / stderr. Configurable facility, app-name, hostname, minimum level,
+  and structured-field inclusion. Best-effort delivery (drop-on-error). The
+  formatter is pure; the emit path is plain socket I/O. Fails closed on bad
+  config.
+class: log_sink
+runtime: native-cdylib-v1
+protocol_version: "1.0"
+required_capabilities:
+  - network_outbound
