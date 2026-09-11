@@ -44,7 +44,7 @@ plugins:
     kind: native
     class: log_sink
     source:
-      oci: ghcr.io/mcpg-dev/source-code/plugins/log-syslog:protocol-1
+      oci: ghcr.io/mcpg-dev/plugins/log-syslog
     granted_capabilities:
       - network_outbound
     config:
